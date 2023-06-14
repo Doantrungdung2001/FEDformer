@@ -2,11 +2,12 @@ export CUDA_VISIBLE_DEVICES=0
 
 #cd ..
 
-for model in FEDformer Autoformer Informer Transformer
-do
-
-for preLen in 96 192 336 720
-do
+# for model in FEDformer Autoformer Informer Transformer
+# do
+# for model in FEDformer
+# do
+# for preLen in 96 192 336 720
+# do
 
 # # ETT m1
 # python -u run.py \
@@ -123,12 +124,12 @@ python -u run.py \
  --root_path ./dataset/all_six_datasets/exchange_rate/ \
  --data_path exchange_rate.csv \
  --task_id Exchange \
- --model $model \
+ --model FEDformer \
  --data custom \
  --features S \
  --seq_len 96 \
  --label_len 48 \
- --pred_len $preLen \
+ --pred_len 96 \
  --e_layers 2 \
  --d_layers 1 \
  --factor 3 \
@@ -180,7 +181,7 @@ python -u run.py \
 #  --c_out 1 \
 #  --des 'Exp' \
 #  --itr 3
-done
+# done
 
 
 # for preLen in 24 36 48 60
@@ -207,5 +208,5 @@ done
 #  --itr 3
 # done
 
-done
+# done
 
