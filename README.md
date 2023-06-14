@@ -1,3 +1,33 @@
+# How to run
+## set up enviroment
+```
+conda create -y -n py38_new python=3.8
+```
+```
+conda activate py38_new
+```
+```
+pip install -r requirements.txt
+```
+
+## download dataset
+```
+mkdir dataset
+cd dataset
+```
+```
+gdown 1alE33S1GmP5wACMXaLu50rDIoVzBM4ik
+```
+```
+unzip all_six_datasets.zip
+```
+
+## train
+```
+bash scripts/run_S.sh
+```
+
+
 # FEDformer (ICML 2022 paper)
 
 Tian Zhou, Ziqing Ma, Qingsong Wen, Xue Wang, Liang Sun, Rong Jin, "FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting," in Proc. 39th International Conference on Machine Learning (ICML 2022), Baltimore, Maryland, July 17-23, 2022
