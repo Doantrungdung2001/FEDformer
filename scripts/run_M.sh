@@ -120,10 +120,10 @@ do
 # exchange
 python -u run.py \
  --is_training 1 \
- --root_path ./dataset/exchange_rate/ \
+ --root_path ./dataset/all_six_datasets/exchange_rate/ \
  --data_path exchange_rate.csv \
  --task_id Exchange \
- --model $model \
+ --model FEDformer \
  --data custom \
  --features M \
  --seq_len 96 \
@@ -136,8 +136,10 @@ python -u run.py \
  --dec_in 8 \
  --c_out 8 \
  --des 'Exp' \
- --itr 3
+ --itr 3 \
+ --target "OT"
 
+done
 # # exchange
 # python -u run.py \
 #  --is_training 1 \
